@@ -1,5 +1,5 @@
 class User:
-    def __init__(self,balance,name): #this is the constructor
+    def __init__(self,balance=0,name): #this is the constructor
         self.balance = balance
         self.name=name
 
@@ -15,9 +15,12 @@ class User:
 
     
     def display_user_balance(self): 
-        #this is the method 2
-       ## print("Wirtdraw amount" , self.amount)
-        print("Remaining balance" , self.balance,"name",self.name)
+        
+       
+        print("balance" , self.balance,"name",self.name)
+
+
+    def 
 
 
 if __name__ == "__main__":
