@@ -8,10 +8,17 @@ def hello_world():
 def hello_dojo():
     return 'Hello dojo'
 
-@app.route('/<name>')          
-def hello_name():
+@app.route('/say/<name>')          
+def hello_name(name):
     for i in name:
-        return 'Hi'+name
+        return 'Hi '+name
+
+@app.route('/repeat/<times>/<word>')
+def repeat_word(times,word):
+    string=""
+    for i in range(int(times)):
+        string+="<p>" + word + "</p>"
+    return string
 
 
 
