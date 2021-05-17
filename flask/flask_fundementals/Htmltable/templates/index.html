@@ -1,0 +1,36 @@
+<html>
+<body>
+<head></head>
+<table style="border:1px black solid ;">
+<thead>
+<td>first Name</td>
+<td>last name</td>
+<td>full name</td>
+
+</thead>
+<tbody>
+{% for i in users %}
+<tr>
+<td>{{i['first_name']}}</td>
+<td>{{i['last_name']}}</td>
+<td>{{i['first_name']}} {{i['last_name']}}</td>
+</tr>
+
+{% endfor %}
+
+
+</tbody>
+
+
+
+
+</table>
+
+
+
+
+
+
+
+</body>
+</html>
