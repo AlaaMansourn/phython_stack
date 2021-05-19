@@ -10,7 +10,7 @@ def final(request):
     name=request.POST['name']
     location=request.POST['location']
     language=request.POST['language']
-    optional=request.POST['optional']
+    optional=request.POST['optinal']
 
 
     
