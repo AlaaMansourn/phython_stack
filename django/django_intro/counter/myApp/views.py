@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 
 
 
@@ -11,7 +11,11 @@ def display_visit(request):
     
     return render(request,'index.html')
 
+def clear_session(request):
 
+    request.session.clear()
+
+    return redirect('/')
 
 
 
