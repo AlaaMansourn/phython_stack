@@ -1,0 +1,53 @@
+*{
+    margin: auto;
+    
+}
+body{
+    background: turquoise;
+}
+.ygold{
+    margin: 30px 0px 0px 80px;
+    border-radius: 8px;
+    border:medium outset black;
+    font-size: x-large;
+    max-width: 200px;
+    background: lightgreen;
+}
+
+ul{
+    margin-top: 20px;
+    list-style-type: none;
+    display:flex;
+}
+li{
+    border: medium outset black;
+    background-color: violet;
+    padding: 5%;
+    text-align: center;
+}
+p{
+    font-size: x-large;
+    margin-top: 30px;
+}
+
+a{
+    text-decoration: none;
+    font-size: x-large;
+}
+#activites{
+    border: medium inset black;
+    background: wheat;
+}
+button{
+    background-color: tomato;
+    border-radius: 8px;
+    border: medium outset tomato;
+    font-size: x-large;
+    
+}
+#reset{
+    background-color: tomato;
+    border-radius: 8px;
+    border: medium outset tomato;
+    margin: 10px 0px 0px 100px;
+}
