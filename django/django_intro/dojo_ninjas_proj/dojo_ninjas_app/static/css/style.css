@@ -1,0 +1,62 @@
+*{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#container{
+    max-width: 1200px;
+    height:auto;
+    padding-top: 50px;
+    background-image:url('0.jpg');
+    border-radius: 12px;
+    box-shadow: 3px 3px black;
+}
+
+td,option,h1{
+    font-size: larger;
+    font-family: cursive;
+}
+input , select{
+    font-family: cursive;
+    border-radius: 8px;
+}
+.upper{
+    width: 700px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background: gold;
+    padding-bottom: 10px;
+    border-radius: 12px;
+    border:medium outset black;
+    box-shadow: 2px 2px black;
+}
+
+select{
+    width: 200px;
+    font-size: large;
+}
+button{
+    background: blueviolet;
+    font-size: larger;
+    font-weight: 700;
+    font-family: cursive;
+    border-radius: 12px;
+    border:solid outset black;
+    box-shadow: 3px 3px black;
+}
+button:hover, button:active {
+    background-color: green;
+}
+.upper:hover, .upper:active{
+    background-color: lightgreen;
+}
+.lower{
+    margin-top: 20px;
+}
+li{
+    list-style-type: none;
+    font-family: cursive;
+}

@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render
 from users_app.models import Users
 
+
 def index(request):
     
     all_users = Users.objects.all()
@@ -22,5 +23,7 @@ def write_to_db(request):
         
 
     return redirect("/")
+
+
 
 # Create your views here.
