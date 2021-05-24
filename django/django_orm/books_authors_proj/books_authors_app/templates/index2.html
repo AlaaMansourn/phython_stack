@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width={device-width}, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Book</h1>
+    <h3>Id :{{book.id}}</h3>
+    <h3>description</h3><p>{{book.desc}}</p>
+    <ul>Authors
+    {%for author in authors %}
+    <li>
+    {{author.first_name}}
+    </li>
+    {% endfor %}
+    </ul>
+
+    <form action="/addauthor" method='GET'>
+        <input type="hidden" name="book_id" value={{book.id}}>
+<select name="auth">
+{% for author in all_author %}
+<option value={{author.id}} >{{author.first_name}}</option>
+{% endfor %}
+
+</select>
+<input type="submit" value="Add">
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<form action="/" method="GET">
+</head>
+<body>
+    <h1>Add an Author</h1>
+        <table>
+        <tr>
+            
+    <td><label for ="fname">First_name</label></td>
+    <td><input type="text" id ="fname" name="fname" ></td>
+        </tr>
+    <tr>
+    <td><label for ="lname">Last_name</td>
+        <td><input type="text" id="lname" name="lname" ></td>
+    </tr>
+    <tr>
+        <td><label for ="notes">notes</td>
+            <td><input type="text" id="notes" name="notes" ></td>
+        </tr>
+    <tr>
+        <td></td>
+        <td><input type="submit" value="Add"></td>
+    </tr>
+    
+        </table>
+        </form>
+    
+        <table style="border:2px solid black">
+    
+        {%for book in books %}
+        <tr>
+            <td>
+        {{book.title}}
+        
+        </td>
+        <td><a href={{book.id}}>view</a></td>
+        </tr>
+        {% endfor %}
+        </table>
+</body>
+</html>

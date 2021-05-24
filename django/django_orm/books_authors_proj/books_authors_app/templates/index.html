@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=my, initial-scale=1.0">
+    <title>Books Author App</title>
+    
+</head>
+<body>
+    <form action="/process" method="GET">
+    <h1>Add a Book</h1>
+    <table>
+    <tr>
+        
+<td><label for ="tit">Title</label></td>
+<td><input type="text" id ="tit" name="title" ></td>
+    </tr>
+<tr>
+<td><label for ="desc">description</td>
+    <td><input type="text" id="desc" name="description" ></td>
+</tr>
+<tr>
+    <td></td>
+    <td><input type="submit" value="Add"></td>
+</tr>
+
+    </table>
+    </form>
+
+    <table style="border:2px solid black">
+
+    {%for book in books %}
+    <tr>
+        <td>
+    {{book.title}}
+    
+    </td>
+    <td><a href={{book.id}}>view</a></td>
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
