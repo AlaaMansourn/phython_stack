@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/shows">go back</a>
+    <section >
+        <h1>Edit a show </h1>                
+         
+
+    <form action="/update" method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="id" value={{this_show.id}}>
+    <label>title</label>
+    <input type="text" name="title" value="{{this_show.title}}"><br><br>
+    <label>network</label>
+    <input type="text" name="network" value="{{this_show.network}}">
+
+    <label>date</label>
+    <input type="date" name="release_date" value="{{this_show.release_date}}"><br><br>
+    <label>description</label>
+    <textarea name="description" cols="30" rows="10" >{{this_show.description}}</textarea><br>
+    
+    <input type="submit" value="update">
+    
+    <a href="/shows/{{this_show.id}}">Go to Show</a>
+
+    
+    
+    </form>
+    
+    
+    
+    </section>
+</body>
+</html>
