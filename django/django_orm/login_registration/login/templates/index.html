@@ -5,27 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login and registration</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1>Login</h1>
-    <form action="/login" method="POST">
-        <input type="hidden" name="login_type" value="login">
-        {% csrf_token %}
-        Name:<input name="name" value="">
-        Password:<input typpe="password" name="password" value=""/>
-        <input type="submit" name="submit" value="Login">
-
-
+    
+<section>
     </form>
     <h1>Registration</h1>
-    <form action="/login" method="POST">
-        <input type="hidden" name="login_type" value="registration">
+    
+    <form action="/register" method="POST">
         {% csrf_token %}
-        Name:<input name="name" value="">
-        Password:<input typpe="password" name="password" value=""/>
-        <input type="submit" name="submit" value="Register">
+        <table>
+        <!-- <input type="hidden" name="login_type" value="registration"> -->
+        
+       <tr>
+       <td><label>First Name</label></td> 
+        <td><input type="text" name="fname" value=""></td>
+        </tr>
+        <tr>
+        <td><label>Last Name</label></td><td><input type="text" name="lname" value=""/></td>
+        </tr>
+        <tr><td><label>Email</label></td><td><input type ="text" name ="email" value=""></td></tr>
+        <tr><td><label>Password</label></td><td><input type="password" name="password"></td></tr>
+        <tr><td><label>Confirn Pw</label></td><td><input type="password" name="pw"></td></tr>
+        <tr><td></td><td><input type="submit" value="Register"></td></tr>
+</form>
+</table>
+</section>
+<aside>
+    <h1>Login</h1>
+    <form action="/login" method="POST">
+        <!-- <input type="hidden" name="login_type" value="login"> -->
+        {% csrf_token %}
+        <table>
 
-
-    </form>
+       <tr><td><label>Email</label></td><td><input type="text" name="email"></td> </tr>
+       <tr><td><label>Password</label></td><td><input type="password" name="password"></td> </tr>
+       <tr><td><input type="submit" name="submit" value="Login"></td> </tr>
+        
+        
+        
+        </table>
+    </aside>
 </body>
+
+{% if messages %}
+<ul class="messages">    
+    {% for message in messages %}    
+        <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+    {% endfor %}
+</ul>
+{% endif %}
 </html>
