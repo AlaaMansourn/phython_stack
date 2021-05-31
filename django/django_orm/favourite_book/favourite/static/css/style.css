@@ -1,0 +1,25 @@
+aside {
+
+display:inline-block;
+
+width : 500px;
+
+}
+
+
+section {
+
+width:500px;
+
+    display:inline-block
+}
+
+.message {
+
+width:780px;
+background-color: green;
+
+
+
+}
+

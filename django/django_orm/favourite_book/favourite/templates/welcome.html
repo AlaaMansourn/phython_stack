@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.add{
+
+
+
+
+
+    display: inline-block;
+    width:500px;
+}
+.display{
+
+
+
+    display: inline-block;
+    width:500px;
+
+
+
+
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    welcome {{request.session.fname}}
+    <a href="logout">logout</a>
+<hr>
+<h1>add a book </h1>
+<div class="add">
+<form action ="/add_book" method="POST">
+    {% csrf_token %}
+<table>
+<tr><td><label>title</label></td><td><input type="text" name="title"></td></tr>
+<tr><td><label>description</label></td><td><input type="text" name="desc"></td></tr>
+<tr><td><input type ="submit" value="addd a book"></td><td></td></tr>
+
+
+</table>
+</form>
+</div>
+<div class = "display">
+
+{% for book in all_book %}
+<h2><a href="" >{{book.title}}</a></h2>
+<p>{{book.title}}
+{{book.uploaded_by.first_name}}</p>
+
+{{book.user_who_like.first_name}}
+
+{% endfor %}
+
+</div>
+</body>
+</html>
